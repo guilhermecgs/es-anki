@@ -7,6 +7,7 @@ Crie flashcards otimizados para memorização e sincronize com o Anki.
 ```
 flashcards/          ← cards gerados (Markdown), legíveis no editor
 sync_anki.py         ← envia cards novos para o Anki e grava anki_id de volta
+sync_anki.config.json← configurações iniciais de sync (deck, tags, etc.)
 main.py              ← cria um card avulso via CLI (uso simples)
 .cursor/skills/      ← skills do projeto para geração e sync
 ```
@@ -39,8 +40,36 @@ uv run python sync_anki.py --dry-run
 # Sync de verdade
 uv run python sync_anki.py
 
+# Forçar deck para todos os cards nesta execução
+uv run python sync_anki.py --deck "Espanhol"
+
 # Criar um card avulso (sem salvar em arquivo)
 uv run python main.py --front "Pergunta?" --back "Resposta"
+```
+
+## Configuração inicial
+
+O arquivo `sync_anki.config.json` centraliza defaults do sync. Exemplo:
+
+```json
+{
+  "anki_connect_url": "http://127.0.0.1:8765",
+  "flashcards_dir": "flashcards",
+  "default_deck": "Espanhol",
+  "sync_tag": "flashcard-sync"
+}
+```
+
+Prioridade de deck na sincronização:
+
+1. `--deck` (linha de comando)
+2. `deck` no frontmatter do arquivo `.md`
+3. `default_deck` no `sync_anki.config.json`
+
+Também é possível usar um arquivo de config alternativo:
+
+```bash
+uv run python sync_anki.py --config outro-config.json
 ```
 
 ## Requisitos

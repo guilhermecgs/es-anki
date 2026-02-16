@@ -1,0 +1,13 @@
+{
+  "anki_connect_url": "http://127.0.0.1:8765",
+  "flashcards_dir": "flashcards",
+  "default_deck": "Espanhol",
+  "sync_tag": "flashcard-sync",
+  "preferred_basic_models": ["Básico", "Basic"],
+  "preferred_cloze_models": [
+    "Cloze",
+    "Cloze (tipo de nota)",
+    "Omissão de Palavras",
+    "Lacunas"
+  ]
+}

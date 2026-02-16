@@ -7,17 +7,58 @@ Usage:
     uv run python sync_anki.py
     uv run python sync_anki.py --dry-run     # preview without sending
     uv run python sync_anki.py --dir other/   # custom flashcards directory
+    uv run python sync_anki.py --deck Espanhol  # force deck for this run
+    uv run python sync_anki.py --config my-sync.json
 """
 
 import argparse
+import json
 import re
 import sys
+from copy import deepcopy
 from pathlib import Path
 
 import requests
 
 ANKI_CONNECT_URL = "http://127.0.0.1:8765"
-FLASHCARDS_DIR = Path("flashcards")
+CONFIG_FILE = Path("sync_anki.config.json")
+DEFAULT_CONFIG = {
+    "anki_connect_url": "http://127.0.0.1:8765",
+    "flashcards_dir": "flashcards",
+    "default_deck": "Espanhol",
+    "sync_tag": "flashcard-sync",
+    "preferred_basic_models": ["Básico", "Basic"],
+    "preferred_cloze_models": [
+        "Cloze",
+        "Cloze (tipo de nota)",
+        "Omissão de Palavras",
+        "Lacunas",
+    ],
+}
+SYNC_TAG = DEFAULT_CONFIG["sync_tag"]
+PREFERRED_BASIC_MODELS = tuple(DEFAULT_CONFIG["preferred_basic_models"])
+PREFERRED_CLOZE_MODELS = tuple(DEFAULT_CONFIG["preferred_cloze_models"])
+
+
+def load_config(config_path: Path) -> dict:
+    config = deepcopy(DEFAULT_CONFIG)
+    if not config_path.exists():
+        return config
+
+    try:
+        loaded = json.loads(config_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(f"Invalid JSON in config file {config_path}: {exc}") from exc
+
+    if not isinstance(loaded, dict):
+        raise RuntimeError(
+            f"Config file {config_path} must contain a JSON object at root."
+        )
+
+    for key in config:
+        if key in loaded:
+            config[key] = loaded[key]
+    return config
 
 
 def invoke_anki(action: str, params: dict | None = None) -> dict:
@@ -36,7 +77,7 @@ def get_deck_names() -> list[str]:
 
 
 def resolve_deck(requested: str | None, available: list[str]) -> str:
-    if requested and requested in available:
+    if requested:
         return requested
     for preferred in ("Default", "Padrão", "default"):
         if preferred in available:
@@ -47,12 +88,7 @@ def resolve_deck(requested: str | None, available: list[str]) -> str:
 def get_cloze_model() -> str | None:
     data = invoke_anki("modelNames")
     names = data.get("result") or []
-    for candidate in (
-        "Cloze",
-        "Cloze (tipo de nota)",
-        "Omissão de Palavras",
-        "Lacunas",
-    ):
+    for candidate in PREFERRED_CLOZE_MODELS:
         if candidate in names:
             return candidate
     for name in names:
@@ -64,7 +100,7 @@ def get_cloze_model() -> str | None:
 def get_basic_model_and_fields() -> tuple[str, list[str]]:
     data = invoke_anki("modelNames")
     names = data.get("result") or []
-    for candidate in ("Básico", "Basic"):
+    for candidate in PREFERRED_BASIC_MODELS:
         if candidate in names:
             fields_data = invoke_anki("modelFieldNames", {"modelName": candidate})
             return candidate, fields_data.get("result") or []
@@ -144,7 +180,7 @@ def add_card_to_anki(
     basic_fields: list[str],
     cloze_model: str | None,
 ) -> int:
-    tags = card.get("tags", []) + ["flashcard-sync"]
+    tags = card.get("tags", []) + [SYNC_TAG]
 
     if card["type"] == "cloze" and cloze_model:
         note = {
@@ -200,9 +236,19 @@ def update_anki_id_in_file(filepath: Path, card_id: str, anki_id: int) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Sync flashcards to Anki.")
     parser.add_argument(
+        "--config",
+        default=str(CONFIG_FILE),
+        help="Path to sync config JSON file.",
+    )
+    parser.add_argument(
         "--dir",
-        default=str(FLASHCARDS_DIR),
-        help="Directory containing flashcard .md files.",
+        default=None,
+        help="Directory containing flashcard .md files (overrides config).",
+    )
+    parser.add_argument(
+        "--deck",
+        default=None,
+        help="Deck name override for all files (overrides frontmatter and config).",
     )
     parser.add_argument(
         "--dry-run",
@@ -211,7 +257,24 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    flashcards_dir = Path(args.dir)
+    config_path = Path(args.config)
+    try:
+        config = load_config(config_path)
+    except RuntimeError as exc:
+        print(exc)
+        sys.exit(1)
+
+    global ANKI_CONNECT_URL, SYNC_TAG, PREFERRED_BASIC_MODELS, PREFERRED_CLOZE_MODELS
+    ANKI_CONNECT_URL = str(config.get("anki_connect_url") or DEFAULT_CONFIG["anki_connect_url"])
+    SYNC_TAG = str(config.get("sync_tag") or DEFAULT_CONFIG["sync_tag"])
+    PREFERRED_BASIC_MODELS = tuple(
+        config.get("preferred_basic_models") or DEFAULT_CONFIG["preferred_basic_models"]
+    )
+    PREFERRED_CLOZE_MODELS = tuple(
+        config.get("preferred_cloze_models") or DEFAULT_CONFIG["preferred_cloze_models"]
+    )
+
+    flashcards_dir = Path(args.dir or config.get("flashcards_dir") or "flashcards")
     if not flashcards_dir.is_dir():
         print(f"Directory not found: {flashcards_dir}")
         sys.exit(1)
@@ -262,7 +325,9 @@ def main() -> None:
                 continue
 
             try:
-                target_deck = resolve_deck(file_deck, deck_names)
+                target_deck = resolve_deck(
+                    args.deck or file_deck or config.get("default_deck"), deck_names
+                )
                 anki_id = add_card_to_anki(
                     card, target_deck, basic_model, basic_fields, cloze_model
                 )
