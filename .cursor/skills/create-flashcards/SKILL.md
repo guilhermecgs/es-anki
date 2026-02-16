@@ -2,16 +2,17 @@
 name: create-flashcards
 description: >-
   Generate high-quality Anki flashcards from any content including photos of
-  grammar book pages, class transcription files, text, or topic descriptions.
-  Follows spaced repetition best practices from SuperMemo's 20 Rules. Cards are
-  saved locally as Markdown in flashcards/ for review before syncing.
-  Use when the user says "create flashcards", "generate cards", "make study cards",
-  "I want to memorize", "help me study", "flashcards about", "cards from this image",
-  "cards from this transcription", or provides content they want to turn into study
+  grammar book pages, class transcription files, free-text topic requests, or
+  any study material. Follows spaced repetition best practices from SuperMemo's
+  20 Rules. Cards are saved locally as Markdown in flashcards/ for review before
+  syncing. Use when the user says "create flashcards", "generate cards", "make
+  study cards", "I want to memorize", "help me study", "flashcards about",
+  "cards from this image", "cards from this transcription", "flashcards about
+  preterito perfecto", or provides any content they want to turn into study
   material. Do NOT use for syncing cards to Anki or general Anki configuration.
 metadata:
   author: guilhermesilveira
-  version: 2.0.0
+  version: 3.0.0
   category: education
   tags: [flashcards, anki, spaced-repetition, memorization, study, spanish]
 ---
@@ -21,12 +22,12 @@ metadata:
 Generate flashcards optimized for spaced repetition from any input.
 Cards are saved as Markdown in `flashcards/` — never synced to Anki automatically.
 
-There are two workflows. Pick the one that matches the input type.
+There are three workflows. Pick the one that matches the input.
 
-## Workflow A: Image of a Book Page (Direct)
+## Workflow A: Image of a Book Page (Direct Extraction)
 
-Use when the user provides a photo or screenshot of a grammar book, vocabulary list,
-verb table, or any structured visual content.
+Use when the user provides a photo or screenshot of a grammar book, vocabulary
+list, verb table, or any structured visual content.
 
 ### Step A1: Extract Content from the Image
 
@@ -42,11 +43,11 @@ Read all files in `flashcards/` to avoid duplicates.
 ### Step A3: Generate Cards Directly
 
 The image already contains the exact content — no discovery phase needed.
-Go straight to creating cards following the best practices in `references/best-practices.md`.
+Go straight to creating cards following `references/best-practices.md`.
 
 Key rules for image-based content:
 - One card per atomic fact (one verb-person-tense combo, one grammar rule, one example).
-- For conjugation tables: one cloze card per cell, with a contextual sentence.
+- For conjugation tables: one cloze card per cell, with a natural contextual sentence.
 - For grammar rules: one basic card for the rule, then cloze cards for each example.
 - For irregular forms: add a card contrasting the irregular vs expected regular form.
 - Aim for exhaustive coverage — extract every learnable fact from the image.
@@ -90,7 +91,7 @@ For each chosen topic:
 1. Re-read the relevant sections of the transcription.
 2. Extract every concrete example, conjugation, vocabulary word, and rule discussed.
 3. If the transcription is incomplete (teacher only mentioned a concept briefly),
-   supplement with your own knowledge to make the cards thorough.
+   supplement with your own knowledge to make the cards thorough and complete.
 4. Generate cards following `references/best-practices.md`.
 
 ### Step B4: Save and Confirm
@@ -98,9 +99,53 @@ For each chosen topic:
 Save one file per topic or one combined file — user's preference.
 Tell the user the card count and remind them to run `uv run python sync_anki.py`.
 
+## Workflow C: Free Topic (Research and Generate)
+
+Use when the user specifies a topic without providing source material.
+Examples: "flashcards about pretérito perfecto", "I want to study ser vs estar",
+"create cards about Spanish subjunctive", "flashcards about irregular verbs".
+
+### Step C1: Understand the Request
+
+Clarify scope if needed:
+- "Pretérito perfecto" → all regular + irregular forms? Just the most common verbs?
+- "Ser vs estar" → all use cases? Focus on the tricky ones?
+
+If the request is clear enough (e.g. "tempos verbais do pretérito perfecto"), proceed.
+
+### Step C2: Check for Existing Cards
+
+Read all files in `flashcards/` to avoid duplicates.
+
+### Step C3: Research and Structure the Content
+
+Use your own knowledge to build comprehensive material:
+1. Identify the key sub-topics (e.g. for pretérito perfecto: formation rule,
+   regular conjugation, irregular participles, usage contexts, contrast with
+   pretérito indefinido).
+2. For each sub-topic, prepare facts, examples, and common mistakes.
+3. Organize from basics → details (rule 3 of best practices).
+
+### Step C4: Generate Cards
+
+Create 15-30+ cards covering the topic thoroughly. Follow `references/best-practices.md`.
+
+For language topics:
+- Start with the formation rule (basic card: "How is pretérito perfecto formed?").
+- Then one cloze card per verb-person combo with a contextual sentence.
+- Then cards for irregular participles.
+- Then usage/context cards ("When to use pretérito perfecto vs indefinido?").
+- Then common mistake cards.
+
+### Step C5: Save and Confirm
+
+Save to `flashcards/YYYY-MM-DD-topic-slug.md`.
+Tell the user the card count and file name.
+
 ## Card Best Practices (Summary)
 
-Before writing cards, consult `references/best-practices.md` for the full 20 rules.
+CRITICAL: Before writing any cards, read `references/best-practices.md` for the
+full rules with detailed rationale, examples, and anti-patterns.
 
 1. **One concept per card** (atomic). Answerable in under 8 seconds.
 2. **Front = one precise question.** Back = shortest possible answer.
@@ -111,7 +156,7 @@ Before writing cards, consult `references/best-practices.md` for the full 20 rul
 7. **Fight interference** — if two cards could be confused, add distinguishing context.
 8. **Personalize** with relevant examples.
 9. **Use redundancy** — same fact from different angles (e.g. question and reverse).
-10. **Exhaustive coverage** — 10-30 cards per topic. Do not under-generate.
+10. **Exhaustive coverage** — 15-30 cards per topic. Do not under-generate.
 
 For concrete good-vs-bad examples, consult `references/examples.md`.
 
@@ -166,6 +211,7 @@ Format rules:
 - Never create enumeration cards ("List all X...").
 - Never generate cards from a transcription without presenting topics first.
 - Never skip content visible in an image — be exhaustive.
+- Never generate shallow/few cards for a free topic — be thorough.
 
 ## Troubleshooting
 
@@ -185,7 +231,11 @@ Solution: Supplement with your own knowledge, but note the source as "expanded f
 Cause: Answer too long or question ambiguous.
 Solution: Shorten answer, sharpen question.
 
+### Free topic cards feel generic
+Cause: Cards lack contextual sentences or real-world examples.
+Solution: Every conjugation card should have a natural sentence, not just "verb → form".
+
 ## Additional Resources
 
-- Full 20 rules with rationale: `references/best-practices.md`
-- Good vs bad card examples: `references/examples.md`
+- Full rules with rationale, examples, and anti-patterns: `references/best-practices.md`
+- Good vs bad card examples across all workflows: `references/examples.md`

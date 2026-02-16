@@ -8,7 +8,13 @@ Crie flashcards otimizados para memorização e sincronize com o Anki.
 flashcards/          ← cards gerados (Markdown), legíveis no editor
 sync_anki.py         ← envia cards novos para o Anki e grava anki_id de volta
 main.py              ← cria um card avulso via CLI (uso simples)
+.cursor/skills/      ← skills do projeto para geração e sync
 ```
+
+## Skills do Cursor
+
+- `create-flashcards`: gera cards em Markdown em `flashcards/` a partir de imagem, transcrição ou tema livre.
+- `sync-ankiweb`: executa o fluxo seguro de sincronização (`--dry-run` + sync real) e valida resultado antes do Sync no AnkiWeb.
 
 ## Fluxo de uso
 
