@@ -397,6 +397,26 @@ curiosity, and personal relevance all improve retention.
   the same forms as 'ser'? Nobody knows for sure!").
 - Frame questions that provoke curiosity.
 
+### Rule 21: Language Variety (Chilean Spanish Standard)
+
+**Rationale**: To maintain consistency and relevance for the user, stick to one Spanish variety. The user specifically requests Chilean Spanish as the standard.
+
+**What this means for card generation**:
+- **Pronouns**: Always use "ustedes" instead of "vosotros".
+- **Vocabulary**: Prefer Chilean terms (e.g., "auto" instead of "coche", "celular" instead of "móvil", "computador" instead of "ordenador") when applicable.
+- **Grammar**: Be aware of voseo (used in Chile but often informal/verbal), but stick to standard Latin American forms for general cards unless colloquial Chilean is requested.
+- **Pronunciation**: If adding audio notes or phonetic descriptions, reference Chilean pronunciation (seseo, aspiration of 's').
+
+**Anti-pattern (Peninsular Spanish)**:
+```
+Front: Vosotros sois mis amigos.
+```
+
+**Correct approach (Chilean/LatAm Standard)**:
+```
+Front: Ustedes son mis amigos.
+```
+
 ---
 
 ## Part 2: Card Design Patterns
@@ -512,6 +532,46 @@ Card 3 — Front: Ser vs estar — which for "tired"?
 
 Card 4 — Front: Ser vs estar — which for professions?
          Back: SER médico/profesor/abogado (inherent characteristic).
+```
+
+### Pattern E: Table Cards (User Preference / Concise Mode)
+
+**Rationale**: While standard best practices (Rule 4) discourage large sets, some advanced learners prefer to memorize full paradigms at once to see the "big picture" and reduce card count.
+
+**When to use**: ONLY when the user explicitly asks for "tables", "concise cards", "less cards", or "full conjugations".
+
+**Structure**:
+- Front: "Conjugate [Verb] in [Tense]" or "Table of [Topic]".
+- Back: The full table, formatted clearly.
+
+**Example**:
+```
+Front: Conjugate "Tener" in Pretérito Indefinido (Full Table).
+Back:
+| Person | Form |
+|---|---|
+| Yo | tuve |
+| Tú | tuviste |
+| Él/Ella/Ud. | tuvo |
+| Nosotros | tuvimos |
+| Vosotros | tuvisteis |
+| Ellos/Uds. | tuvieron |
+```
+
+**Hybrid Approach (Recommended for Tables)**:
+Even in Table Mode, add *one* example sentence below the table to ground it in reality.
+
+```
+Front: Conjugate "Ser" in Pretérito Imperfecto.
+Back:
+| Yo | era |
+| Tú | eras |
+| Él | era |
+| Nosotros | éramos |
+| Vosotros | erais |
+| Ellos | eran |
+
+Example: "Cuando yo era niño, vivía en Madrid."
 ```
 
 ---

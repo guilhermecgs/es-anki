@@ -43,6 +43,9 @@ uv run python sync_anki.py
 # Forçar deck para todos os cards nesta execução
 uv run python sync_anki.py --deck "Espanhol"
 
+# Usar outro diretório de arquivos .md
+uv run python sync_anki.py --dir flashcards-outra-pasta
+
 # Criar um card avulso (sem salvar em arquivo)
 uv run python main.py --front "Pergunta?" --back "Resposta"
 ```
@@ -75,4 +78,5 @@ uv run python sync_anki.py --config outro-config.json
 ## Requisitos
 
 - [uv](https://docs.astral.sh/uv/) instalado
+- Python `>=3.12`
 - Anki Desktop com o add-on **AnkiConnect** (código `2055492159`)
