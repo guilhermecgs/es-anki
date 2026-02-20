@@ -24,6 +24,13 @@ Cards are saved as Markdown in `flashcards/` — never synced to Anki automatica
 
 There are five workflows. Pick the one that matches the input.
 
+## Runtime Requirement (Python)
+
+- **Always run Python via `uv` from the project root.**
+- Never run `python ...` directly for this skill.
+- Preferred pattern: `uv run python ...` or `uv run --with <package> python ...`.
+- If an extra package is needed, install/use it through `uv` (example: `uv run --with pypdfium2 --with pillow python ...`).
+
 ## Workflow A: Image of a Book Page (Direct Extraction)
 
 Use when the user provides a photo or screenshot of a grammar book, vocabulary
@@ -355,7 +362,7 @@ Solution: Every conjugation card should have a natural sentence, not just "verb 
 
 ### PDF text extraction returns garbled content
 Cause: PDF is scanned or uses non-standard encoding.
-Solution: Automatically fall back to image-based extraction via `pdftoppm`. If `pdftoppm` is not installed, inform the user to run `brew install poppler` and retry.
+Solution: Automatically fall back to image-based extraction via `pdftoppm`. If `pdftoppm` is not installed, use a Python fallback **with `uv`** (for example: `uv run --with pypdfium2 --with pillow python ...`). If neither is possible, inform the user to run `brew install poppler` and retry.
 
 ## Additional Resources
 
