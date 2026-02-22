@@ -6,6 +6,7 @@ and writes back the anki_id to prevent duplicates on subsequent runs.
 Usage:
     uv run python sync_anki.py
     uv run python sync_anki.py --dry-run     # preview without sending
+    uv run python sync_anki.py --update-existing  # update cards with anki_id
     uv run python sync_anki.py --dir other/   # custom flashcards directory
     uv run python sync_anki.py --deck Espanhol  # force deck for this run
     uv run python sync_anki.py --config my-sync.json
@@ -223,6 +224,39 @@ def add_card_to_anki(
         return data["result"]
 
 
+def get_note_info(note_id: int) -> dict:
+    data = invoke_anki("notesInfo", {"notes": [note_id]})
+    notes = data.get("result") or []
+    if not notes:
+        raise RuntimeError(f"Note not found in Anki for anki_id={note_id}")
+    return notes[0]
+
+
+def build_fields_update(note_info: dict, card: dict) -> dict:
+    fields_obj = note_info.get("fields") or {}
+    field_names = sorted(
+        fields_obj.keys(),
+        key=lambda name: (fields_obj.get(name) or {}).get("order", 999),
+    )
+    if not field_names:
+        raise RuntimeError("Cannot update note fields: note has no fields.")
+
+    updated_fields = {field_names[0]: card["front"]}
+    if len(field_names) >= 2:
+        updated_fields[field_names[1]] = card["back"]
+    return updated_fields
+
+
+def update_existing_card_in_anki(card: dict, anki_id: int) -> None:
+    note_info = get_note_info(anki_id)
+    fields = build_fields_update(note_info, card)
+    invoke_anki("updateNoteFields", {"note": {"id": anki_id, "fields": fields}})
+
+    tags = sorted(set((card.get("tags") or []) + [SYNC_TAG]))
+    if tags:
+        invoke_anki("addTags", {"notes": [anki_id], "tags": " ".join(tags)})
+
+
 def update_anki_id_in_file(filepath: Path, card_id: str, anki_id: int) -> None:
     content = filepath.read_text(encoding="utf-8")
     pattern = re.compile(
@@ -254,6 +288,11 @@ def main() -> None:
         "--dry-run",
         action="store_true",
         help="Show what would be synced without sending to Anki.",
+    )
+    parser.add_argument(
+        "--update-existing",
+        action="store_true",
+        help="Update cards with anki_id in Anki instead of skipping them.",
     )
     args = parser.parse_args()
 
@@ -298,6 +337,7 @@ def main() -> None:
             sys.exit(1)
 
     synced = 0
+    updated = 0
     skipped = 0
     errors = 0
 
@@ -314,6 +354,20 @@ def main() -> None:
 
         for card in cards:
             if card["anki_id"]:
+                if args.update_existing:
+                    if args.dry_run:
+                        front_preview = card["front"][:60].replace("\n", " ")
+                        print(f"  WOULD UPDATE {card['id']}: {front_preview}...")
+                        updated += 1
+                        continue
+                    try:
+                        update_existing_card_in_anki(card, card["anki_id"])
+                        print(f"  UPDATED {card['id']} (anki_id={card['anki_id']})")
+                        updated += 1
+                    except RuntimeError as exc:
+                        print(f"  ERROR {card['id']}: {exc}")
+                        errors += 1
+                    continue
                 print(f"  SKIP {card['id']} (already synced: {card['anki_id']})")
                 skipped += 1
                 continue
@@ -338,7 +392,9 @@ def main() -> None:
                 print(f"  ERROR {card['id']}: {exc}")
                 errors += 1
 
-    print(f"\nDone: {synced} synced, {skipped} skipped, {errors} errors.")
+    print(
+        f"\nDone: {synced} synced, {updated} updated, {skipped} skipped, {errors} errors."
+    )
 
 
 if __name__ == "__main__":

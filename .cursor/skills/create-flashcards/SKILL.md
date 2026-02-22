@@ -12,7 +12,7 @@ description: >-
   material. Defaults to Chilean Spanish standard (e.g. ustedes instead of vosotros) unless otherwise requested. Do NOT use for syncing cards to Anki or general Anki configuration.
 metadata:
   author: guilhermesilveira
-  version: 3.1.0
+  version: 3.2.0
   category: education
   tags: [flashcards, anki, spaced-repetition, memorization, study, spanish]
 ---
@@ -269,9 +269,10 @@ CRITICAL: Before writing any cards, read `references/best-practices.md`.
 - **Bias towards Tables** for conjugations and lists to keep card count low.
 - **Bias towards Atomic** for complex rules and usage examples.
 - Do not force one or the other; use what best fits the specific content.
+- **Rich Back Expansion**: For every card, keep the first line as the direct answer, then add a short "More info (optional)" block with supporting context when helpful (especially for grammar/conjugation cards).
 
 1. **Intelligent Mode** — Choose Table vs Atomic based on content type.
-2. **Front = one precise question.** Back = answer (concise or table).
+2. **Front = one precise question.** Back = direct answer first, then optional extra context.
 3. **Prefer cloze deletions** for vocabulary in context.
 4. **Use sets/tables** — *When appropriate for conjugations or groups*.
 5. **Use context clues**.
@@ -281,6 +282,7 @@ CRITICAL: Before writing any cards, read `references/best-practices.md`.
 9. **Use redundancy**.
 10. **Exhaustive coverage**.
 11. **Chilean Spanish Standard** — Always use Chilean Spanish by default.
+12. **Conjugation Context on Back** — If the card tests one conjugated form, add 2-5 related forms of the same verb/tense in "More info (optional)".
 
 For concrete good-vs-bad examples, consult `references/examples.md`.
 
@@ -304,6 +306,10 @@ type: basic
 
 **Back:** Concise answer here.
 
+More info (optional):
+- Short clarification or contrast.
+- For conjugations: include 2-5 related forms (same verb + tense).
+
 ---
 
 ## Card 2
@@ -324,6 +330,7 @@ Format rules:
 - **type**: `basic` or `cloze` (use `{{c1::answer}}` syntax).
 - **tags**: comma-separated per card.
 - **Front/Back**: use `**Front:**` and `**Back:**` prefixes exactly.
+- **Back structure**: first line = direct answer; optional lines below can include `More info (optional):` with bullets.
 - **Cards separated by** `---`.
 
 ## What NOT to Do
@@ -332,7 +339,7 @@ Format rules:
 - Never use 'vosotros' or Peninsular Spanish forms unless explicitly requested. Default to Chilean Spanish.
 - Never create cards for content you don't understand — ask first.
 - Never put multiple concepts in one card (UNLESS it is a Table card or necessary for context).
-- Never create cards with answers longer than ~15 words (UNLESS it is a Table card).
+- Never make the **direct answer line** longer than ~15 words (UNLESS it is a Table card). Extra context is allowed below in `More info (optional)`.
 - Never generate cards from a transcription without presenting topics first.
 - Never skip content visible in an image — be exhaustive.
 - Never generate shallow/few cards for a free topic — be thorough.

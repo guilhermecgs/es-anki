@@ -296,6 +296,28 @@ Front: Which Spanish past tense expresses actions connected to the present?
 Back: Pretérito perfecto compuesto.
 ```
 
+### Rule 12.5: Rich Back, Fast Recall First
+
+**Rationale**: The user wants deeper context without losing speed in review. Keep
+recall fast by placing the direct answer first, then add optional support below.
+
+**Back structure**:
+1. First line: direct answer (short, objective).
+2. Optional block: `More info (optional):` with 1-3 bullets.
+3. For conjugation cards, include related forms of the same verb/tense to build
+   a connected mental model.
+
+**Example (basic card)**:
+```
+Front: ¿Cuál es la forma de "yo" de "tener" en pretérito indefinido?
+Back: tuve
+
+More info (optional):
+- tú: tuviste
+- él/ella/usted: tuvo
+- nosotros: tuvimos
+```
+
 ### Rule 13: Refer to Other Memories
 
 **Rationale**: New knowledge anchored to existing knowledge is retained far
@@ -460,6 +482,17 @@ Front: ¿Cuál es el participio irregular de "escribir"? (not *escribido)
 Back: escrito
 
 Front: He {{c1::escrito}} tres cartas hoy. (escribir, participio irregular)
+```
+
+**Layer 5B — Optional expansion on back (recommended for this user)**:
+```
+Front: ¿Cuál es la forma de "yo" de "venir" en pretérito indefinido?
+Back: vine
+
+More info (optional):
+- tú: viniste
+- él/ella/usted: vino
+- ellos/ustedes: vinieron
 ```
 
 **Layer 6 — Usage contrast cards (basic)**:
@@ -648,7 +681,8 @@ user identify the correct tense:
 Before saving any flashcard file, verify every card against this checklist:
 
 - [ ] Each card tests exactly ONE concept.
-- [ ] Every answer is under 15 words (ideally under 8).
+- [ ] The direct answer line is under 15 words (ideally under 8).
+- [ ] If used, `More info (optional)` adds context without changing the main answer.
 - [ ] Every conjugation card has a natural contextual sentence.
 - [ ] Cloze cards include a hint in parentheses (verb, tense) when needed.
 - [ ] No card asks "List all X" or "Conjugate X in Y" (enumeration).
