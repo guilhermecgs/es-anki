@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-nem2u4-eo-001
-anki_id:
+anki_id: 1771888045771
 tags: opinion, estructura
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-nem2u4-eo-002
-anki_id:
+anki_id: 1771888045822
 tags: opinion, tambien
 type: basic
 
@@ -31,7 +31,7 @@ type: basic
 
 ## Card 3
 id: fc-20260217-nem2u4-eo-003
-anki_id:
+anki_id: 1771888045856
 tags: opinion, tampoco
 type: basic
 
@@ -43,7 +43,7 @@ type: basic
 
 ## Card 4
 id: fc-20260217-nem2u4-eo-004
-anki_id:
+anki_id: 1771888045904
 tags: opinion, a-mi-si
 type: cloze
 

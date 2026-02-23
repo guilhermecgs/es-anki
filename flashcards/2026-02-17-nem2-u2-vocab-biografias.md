@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-141700-001
-anki_id:
+anki_id: 1771888044416
 tags: nacer, biografia
 type: cloze
 
@@ -19,7 +19,7 @@ type: cloze
 
 ## Card 2
 id: fc-20260217-141700-002
-anki_id:
+anki_id: 1771888044488
 tags: estudiar, biografia
 type: cloze
 
@@ -31,7 +31,7 @@ type: cloze
 
 ## Card 3
 id: fc-20260217-141700-003
-anki_id:
+anki_id: 1771888044540
 tags: casarse, biografia
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-141700-004
-anki_id:
+anki_id: 1771888044574
 tags: divorciarse, biografia
 type: cloze
 
@@ -55,7 +55,7 @@ type: cloze
 
 ## Card 5
 id: fc-20260217-141700-005
-anki_id:
+anki_id: 1771888044609
 tags: mudarse, biografia
 type: cloze
 

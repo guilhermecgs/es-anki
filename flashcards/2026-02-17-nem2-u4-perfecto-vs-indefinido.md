@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-nem2u4-pi-001
-anki_id:
+anki_id: 1771888046131
 tags: perfecto, uso
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-nem2u4-pi-002
-anki_id:
+anki_id: 1771888046161
 tags: indefinido, uso
 type: basic
 
@@ -31,7 +31,7 @@ type: basic
 
 ## Card 3
 id: fc-20260217-nem2u4-pi-003
-anki_id:
+anki_id: 1771888046208
 tags: contraste, he-terminado
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-nem2u4-pi-004
-anki_id:
+anki_id: 1771888046256
 tags: contraste, termine
 type: cloze
 
@@ -55,7 +55,7 @@ type: cloze
 
 ## Card 5
 id: fc-20260217-nem2u4-pi-005
-anki_id:
+anki_id: 1771888046321
 tags: contraste, marcadores
 type: basic
 

@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-170003-001
-anki_id:
+anki_id: 1771888044639
 tags: hay-que, uso
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-170003-002
-anki_id:
+anki_id: 1771888044686
 tags: hay-que, cloze
 type: cloze
 
@@ -31,7 +31,7 @@ type: cloze
 
 ## Card 3
 id: fc-20260217-170003-003
-anki_id:
+anki_id: 1771888044710
 tags: hay-que, cloze
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-170003-004
-anki_id:
+anki_id: 1771888044740
 tags: se-puede, uso
 type: basic
 
@@ -55,7 +55,7 @@ type: basic
 
 ## Card 5
 id: fc-20260217-170003-005
-anki_id:
+anki_id: 1771888044761
 tags: se-puede, cloze
 type: cloze
 

@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-u6-v-001
-anki_id:
+anki_id: 1771888048014
 tags: cocina, verbos
 type: cloze
 
@@ -19,7 +19,7 @@ type: cloze
 
 ## Card 2
 id: fc-20260217-u6-v-002
-anki_id:
+anki_id: 1771888048107
 tags: cocina, verbos
 type: cloze
 
@@ -31,7 +31,7 @@ type: cloze
 
 ## Card 3
 id: fc-20260217-u6-v-003
-anki_id:
+anki_id: 1771888048118
 tags: cocina, verbos
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-u6-v-004
-anki_id:
+anki_id: 1771888048138
 tags: cocina, verbos
 type: cloze
 
@@ -55,7 +55,7 @@ type: cloze
 
 ## Card 5
 id: fc-20260217-u6-v-005
-anki_id:
+anki_id: 1771888048157
 tags: cocina, verbos
 type: cloze
 

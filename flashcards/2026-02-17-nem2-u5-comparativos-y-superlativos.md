@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-nem2u5-cs-001
-anki_id:
+anki_id: 1771888046689
 tags: comparativo, regla
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-nem2u5-cs-002
-anki_id:
+anki_id: 1771888046709
 tags: comparativo, inferioridad
 type: basic
 
@@ -31,7 +31,7 @@ type: basic
 
 ## Card 3
 id: fc-20260217-nem2u5-cs-003
-anki_id:
+anki_id: 1771888046779
 tags: comparativo, irregular, mejor
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-nem2u5-cs-004
-anki_id:
+anki_id: 1771888046825
 tags: comparativo, irregular, peor
 type: cloze
 
@@ -55,7 +55,7 @@ type: cloze
 
 ## Card 5
 id: fc-20260217-nem2u5-cs-005
-anki_id:
+anki_id: 1771888046856
 tags: comparativo, irregular, mayor
 type: cloze
 
@@ -67,7 +67,7 @@ type: cloze
 
 ## Card 6
 id: fc-20260217-nem2u5-cs-006
-anki_id:
+anki_id: 1771888046896
 tags: comparativo, irregular, menor
 type: cloze
 

@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-u6-s-001
-anki_id:
+anki_id: 1771888047821
 tags: se-impersonal, concepto
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-u6-s-002
-anki_id:
+anki_id: 1771888047855
 tags: se-impersonal, forma
 type: basic
 
@@ -31,7 +31,7 @@ type: basic
 
 ## Card 3
 id: fc-20260217-u6-s-003
-anki_id:
+anki_id: 1771888047888
 tags: se-impersonal, cloze
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-u6-s-004
-anki_id:
+anki_id: 1771888047931
 tags: se-impersonal, instrucciones
 type: cloze
 
@@ -55,7 +55,7 @@ type: cloze
 
 ## Card 5
 id: fc-20260217-u6-s-005
-anki_id:
+anki_id: 1771888047957
 tags: pasiva-refleja, concepto
 type: basic
 
@@ -67,7 +67,7 @@ type: basic
 
 ## Card 6
 id: fc-20260217-u6-s-006
-anki_id:
+anki_id: 1771888047984
 tags: pasiva-refleja, concordancia
 type: basic
 

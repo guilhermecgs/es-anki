@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-170002-001
-anki_id:
+anki_id: 1771888044789
 tags: perfecto, uso
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-170002-002
-anki_id:
+anki_id: 1771888044822
 tags: perfecto, formacion
 type: basic
 
@@ -31,7 +31,7 @@ type: basic
 
 ## Card 3
 id: fc-20260217-170002-003
-anki_id:
+anki_id: 1771888044867
 tags: haber, cloze
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-170002-004
-anki_id:
+anki_id: 1771888044883
 tags: haber, cloze
 type: cloze
 
@@ -55,7 +55,7 @@ type: cloze
 
 ## Card 5
 id: fc-20260217-170002-005
-anki_id:
+anki_id: 1771888044923
 tags: haber, cloze
 type: cloze
 
@@ -67,7 +67,7 @@ type: cloze
 
 ## Card 6
 id: fc-20260217-170002-006
-anki_id:
+anki_id: 1771888044940
 tags: haber, cloze
 type: cloze
 
@@ -79,7 +79,7 @@ type: cloze
 
 ## Card 7
 id: fc-20260217-170002-007
-anki_id:
+anki_id: 1771888044977
 tags: marcadores, perfecto
 type: basic
 

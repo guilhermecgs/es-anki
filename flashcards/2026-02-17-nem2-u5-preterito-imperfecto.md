@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-nem2u5-im-001
-anki_id:
+anki_id: 1771888047115
 tags: imperfecto, uso
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-nem2u5-im-002
-anki_id:
+anki_id: 1771888047156
 tags: imperfecto, formacion
 type: basic
 
@@ -31,7 +31,7 @@ type: basic
 
 ## Card 3
 id: fc-20260217-nem2u5-im-003
-anki_id:
+anki_id: 1771888047195
 tags: imperfecto, estudiar, cloze
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-nem2u5-im-004
-anki_id:
+anki_id: 1771888047239
 tags: imperfecto, tener, irregular
 type: basic
 
@@ -55,7 +55,7 @@ type: basic
 
 ## Card 5
 id: fc-20260217-nem2u5-im-005
-anki_id:
+anki_id: 1771888047262
 tags: imperfecto, salir, cloze
 type: cloze
 
@@ -67,7 +67,7 @@ type: cloze
 
 ## Card 6
 id: fc-20260217-nem2u5-im-006
-anki_id:
+anki_id: 1771888047311
 tags: imperfecto, ser, irregular
 type: basic
 

@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-nem2u4-mg-001
-anki_id:
+anki_id: 1771888045942
 tags: me-gustaria, uso
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-nem2u4-mg-002
-anki_id:
+anki_id: 1771888045972
 tags: me-gustaria, estructura
 type: basic
 
@@ -31,7 +31,7 @@ type: basic
 
 ## Card 3
 id: fc-20260217-nem2u4-mg-003
-anki_id:
+anki_id: 1771888046028
 tags: me-gustaria, deseo
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-nem2u4-mg-004
-anki_id:
+anki_id: 1771888046077
 tags: me-gustaria, peticion
 type: cloze
 
@@ -55,7 +55,7 @@ type: cloze
 
 ## Card 5
 id: fc-20260217-nem2u4-mg-005
-anki_id:
+anki_id: 1771888046103
 tags: me-gustaria, te
 type: cloze
 

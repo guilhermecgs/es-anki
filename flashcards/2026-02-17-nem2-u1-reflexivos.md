@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-141501-001
-anki_id:
+anki_id: 1771888043683
 tags: reflexivos, tabla-pronombres
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-141501-002
-anki_id:
+anki_id: 1771888043706
 tags: levantarse, cloze
 type: cloze
 
@@ -31,7 +31,7 @@ type: cloze
 
 ## Card 3
 id: fc-20260217-141501-003
-anki_id:
+anki_id: 1771888043742
 tags: ducharse, cloze
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-141501-004
-anki_id:
+anki_id: 1771888043765
 tags: vestirse, cloze
 type: cloze
 
@@ -55,7 +55,7 @@ type: cloze
 
 ## Card 5
 id: fc-20260217-141501-005
-anki_id:
+anki_id: 1771888043789
 tags: acostarse, cloze
 type: cloze
 

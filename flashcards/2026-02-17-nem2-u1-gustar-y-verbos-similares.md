@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-141500-001
-anki_id:
+anki_id: 1771888043221
 tags: gustar, estructura-completa
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-141500-002
-anki_id:
+anki_id: 1771888043290
 tags: encantar, cloze
 type: cloze
 
@@ -31,7 +31,7 @@ type: cloze
 
 ## Card 3
 id: fc-20260217-141500-003
-anki_id:
+anki_id: 1771888043347
 tags: encantar, plural
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-141500-004
-anki_id:
+anki_id: 1771888043393
 tags: parecer, opinion
 type: cloze
 
@@ -55,7 +55,7 @@ type: cloze
 
 ## Card 5
 id: fc-20260217-141500-005
-anki_id:
+anki_id: 1771888043406
 tags: parecer, opinion
 type: cloze
 
@@ -67,7 +67,7 @@ type: cloze
 
 ## Card 6
 id: fc-20260217-141500-006
-anki_id:
+anki_id: 1771888043430
 tags: pasar, suceder
 type: cloze
 

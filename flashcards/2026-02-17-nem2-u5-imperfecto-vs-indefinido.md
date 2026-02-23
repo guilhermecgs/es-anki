@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-nem2u5-iv-001
-anki_id:
+anki_id: 1771888046917
 tags: contraste, regla
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-nem2u5-iv-002
-anki_id:
+anki_id: 1771888046939
 tags: contraste, ambos-en-frase
 type: cloze
 
@@ -31,7 +31,7 @@ type: cloze
 
 ## Card 3
 id: fc-20260217-nem2u5-iv-003
-anki_id:
+anki_id: 1771888047016
 tags: contraste, interrupcion
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-nem2u5-iv-004
-anki_id:
+anki_id: 1771888047066
 tags: contraste, habitos-vs-evento
 type: basic
 
@@ -55,7 +55,7 @@ type: basic
 
 ## Card 5
 id: fc-20260217-nem2u5-iv-005
-anki_id:
+anki_id: 1771888047093
 tags: contraste, descripcion-vs-accion
 type: cloze
 

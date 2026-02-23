@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-u6-i-001
-anki_id:
+anki_id: 1771888047605
 tags: indefinidos, invariables
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-u6-i-002
-anki_id:
+anki_id: 1771888047621
 tags: indefinidos, variables
 type: basic
 
@@ -31,7 +31,7 @@ type: basic
 
 ## Card 3
 id: fc-20260217-u6-i-003
-anki_id:
+anki_id: 1771888047658
 tags: algun-ningun, apocopacion
 type: basic
 
@@ -43,7 +43,7 @@ type: basic
 
 ## Card 4
 id: fc-20260217-u6-i-004
-anki_id:
+anki_id: 1771888047703
 tags: alguien-nadie, cloze
 type: cloze
 
@@ -55,7 +55,7 @@ type: cloze
 
 ## Card 5
 id: fc-20260217-u6-i-005
-anki_id:
+anki_id: 1771888047723
 tags: nadie, cloze
 type: cloze
 
@@ -67,7 +67,7 @@ type: cloze
 
 ## Card 6
 id: fc-20260217-u6-i-006
-anki_id:
+anki_id: 1771888047763
 tags: algo-nada, cloze
 type: cloze
 

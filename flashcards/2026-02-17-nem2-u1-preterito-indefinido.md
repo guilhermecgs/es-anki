@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-141502-001
-anki_id:
+anki_id: 1771888043459
 tags: indefinido, uso
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-141502-002
-anki_id:
+anki_id: 1771888043501
 tags: indefinido, regular, tabla
 type: basic
 
@@ -31,7 +31,7 @@ type: basic
 
 ## Card 3
 id: fc-20260217-141502-003
-anki_id:
+anki_id: 1771888043547
 tags: trabajar, cloze
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-141502-004
-anki_id:
+anki_id: 1771888043588
 tags: comer, cloze
 type: cloze
 
@@ -55,7 +55,7 @@ type: cloze
 
 ## Card 5
 id: fc-20260217-141502-005
-anki_id:
+anki_id: 1771888043613
 tags: salir, cloze
 type: cloze
 
@@ -67,7 +67,7 @@ type: cloze
 
 ## Card 6
 id: fc-20260217-141502-006
-anki_id:
+anki_id: 1771888043634
 tags: dar, tabla
 type: basic
 
@@ -79,7 +79,7 @@ type: basic
 
 ## Card 7
 id: fc-20260217-141502-007
-anki_id:
+anki_id: 1771888043664
 tags: dar, cloze
 type: cloze
 

@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-170004-001
-anki_id:
+anki_id: 1771888045578
 tags: caracter, cloze
 type: cloze
 
@@ -19,7 +19,7 @@ type: cloze
 
 ## Card 2
 id: fc-20260217-170004-002
-anki_id:
+anki_id: 1771888045602
 tags: caracter, cloze
 type: cloze
 
@@ -31,7 +31,7 @@ type: cloze
 
 ## Card 3
 id: fc-20260217-170004-003
-anki_id:
+anki_id: 1771888045698
 tags: caracter, cloze
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-170004-004
-anki_id:
+anki_id: 1771888045734
 tags: caracter, cloze
 type: cloze
 

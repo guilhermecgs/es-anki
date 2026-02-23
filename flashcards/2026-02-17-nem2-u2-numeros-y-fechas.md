@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-141600-001
-anki_id:
+anki_id: 1771888044006
 tags: numeros, 16-19
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-141600-002
-anki_id:
+anki_id: 1771888044053
 tags: numeros, 21-29
 type: basic
 
@@ -31,7 +31,7 @@ type: basic
 
 ## Card 3
 id: fc-20260217-141600-003
-anki_id:
+anki_id: 1771888044083
 tags: numeros, centenas
 type: basic
 
@@ -43,7 +43,7 @@ type: basic
 
 ## Card 4
 id: fc-20260217-141600-004
-anki_id:
+anki_id: 1771888044116
 tags: numeros, miles
 type: cloze
 
@@ -55,7 +55,7 @@ type: cloze
 
 ## Card 5
 id: fc-20260217-141600-005
-anki_id:
+anki_id: 1771888044163
 tags: numeros, miles
 type: cloze
 

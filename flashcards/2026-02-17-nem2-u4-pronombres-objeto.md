@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-nem2u4-po-001
-anki_id:
+anki_id: 1771888046383
 tags: pronombres, OD
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-nem2u4-po-002
-anki_id:
+anki_id: 1771888046418
 tags: pronombres, OI
 type: basic
 
@@ -31,7 +31,7 @@ type: basic
 
 ## Card 3
 id: fc-20260217-nem2u4-po-003
-anki_id:
+anki_id: 1771888046459
 tags: pronombres, orden
 type: basic
 
@@ -43,7 +43,7 @@ type: basic
 
 ## Card 4
 id: fc-20260217-nem2u4-po-004
-anki_id:
+anki_id: 1771888046503
 tags: pronombres, le-se
 type: basic
 
@@ -55,7 +55,7 @@ type: basic
 
 ## Card 5
 id: fc-20260217-nem2u4-po-005
-anki_id:
+anki_id: 1771888046543
 tags: pronombres, se-lo
 type: cloze
 
@@ -67,7 +67,7 @@ type: cloze
 
 ## Card 6
 id: fc-20260217-nem2u4-po-006
-anki_id:
+anki_id: 1771888046559
 tags: pronombres, se-la
 type: cloze
 

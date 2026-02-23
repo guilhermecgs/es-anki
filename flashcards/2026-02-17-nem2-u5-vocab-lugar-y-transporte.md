@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-nem2u5-vl-001
-anki_id:
+anki_id: 1771888047340
 tags: vocab, lugar, delante
 type: cloze
 
@@ -19,7 +19,7 @@ type: cloze
 
 ## Card 2
 id: fc-20260217-nem2u5-vl-002
-anki_id:
+anki_id: 1771888047470
 tags: vocab, lugar, detras
 type: cloze
 
@@ -31,7 +31,7 @@ type: cloze
 
 ## Card 3
 id: fc-20260217-nem2u5-vl-003
-anki_id:
+anki_id: 1771888047518
 tags: vocab, lugar, derecha
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-nem2u5-vl-004
-anki_id:
+anki_id: 1771888047557
 tags: vocab, lugar, izquierda
 type: cloze
 

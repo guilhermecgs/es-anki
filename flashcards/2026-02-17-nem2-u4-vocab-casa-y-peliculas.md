@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-nem2u4-vc-001
-anki_id:
+anki_id: 1771888046584
 tags: vocab, habitaciones
 type: cloze
 
@@ -19,7 +19,7 @@ type: cloze
 
 ## Card 2
 id: fc-20260217-nem2u4-vc-002
-anki_id:
+anki_id: 1771888046608
 tags: vocab, habitaciones
 type: cloze
 
@@ -31,7 +31,7 @@ type: cloze
 
 ## Card 3
 id: fc-20260217-nem2u4-vc-003
-anki_id:
+anki_id: 1771888046638
 tags: vocab, habitaciones
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-nem2u4-vc-004
-anki_id:
+anki_id: 1771888046656
 tags: vocab, muebles
 type: cloze
 

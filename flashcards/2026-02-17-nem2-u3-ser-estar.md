@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-170001-001
-anki_id:
+anki_id: 1771888044997
 tags: ser, uso
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-170001-002
-anki_id:
+anki_id: 1771888045088
 tags: estar, uso
 type: basic
 
@@ -31,7 +31,7 @@ type: basic
 
 ## Card 3
 id: fc-20260217-170001-003
-anki_id:
+anki_id: 1771888045159
 tags: ser, cloze
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-170001-004
-anki_id:
+anki_id: 1771888045246
 tags: estar, cloze
 type: cloze
 
@@ -55,7 +55,7 @@ type: cloze
 
 ## Card 5
 id: fc-20260217-170001-005
-anki_id:
+anki_id: 1771888045329
 tags: contraste, ser-estar
 type: basic
 
@@ -67,7 +67,7 @@ type: basic
 
 ## Card 6
 id: fc-20260217-170001-006
-anki_id:
+anki_id: 1771888045443
 tags: contraste, ser-estar
 type: basic
 

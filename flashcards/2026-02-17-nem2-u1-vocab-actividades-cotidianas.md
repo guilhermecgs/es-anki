@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-141503-001
-anki_id:
+anki_id: 1771888043806
 tags: despertarse, vocab
 type: cloze
 
@@ -19,7 +19,7 @@ type: cloze
 
 ## Card 2
 id: fc-20260217-141503-002
-anki_id:
+anki_id: 1771888043834
 tags: desayunar, vocab
 type: cloze
 
@@ -31,7 +31,7 @@ type: cloze
 
 ## Card 3
 id: fc-20260217-141503-003
-anki_id:
+anki_id: 1771888043896
 tags: ir-al-trabajo, vocab
 type: cloze
 
@@ -43,7 +43,7 @@ type: cloze
 
 ## Card 4
 id: fc-20260217-141503-004
-anki_id:
+anki_id: 1771888043941
 tags: almorzar, vocab
 type: cloze
 

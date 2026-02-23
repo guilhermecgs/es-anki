@@ -7,7 +7,7 @@ deck: "Espanhol"
 
 ## Card 1
 id: fc-20260217-141500-001
-anki_id:
+anki_id: 1771888044190
 tags: interrogativos, invariables
 type: basic
 
@@ -19,7 +19,7 @@ type: basic
 
 ## Card 2
 id: fc-20260217-141500-002
-anki_id:
+anki_id: 1771888044239
 tags: interrogativos, variables
 type: basic
 
@@ -31,7 +31,7 @@ type: basic
 
 ## Card 3
 id: fc-20260217-141500-003
-anki_id:
+anki_id: 1771888044271
 tags: acentuacion, regla
 type: basic
 
@@ -43,7 +43,7 @@ type: basic
 
 ## Card 4
 id: fc-20260217-141500-004
-anki_id:
+anki_id: 1771888044306
 tags: que, uso
 type: cloze
 
@@ -55,7 +55,7 @@ type: cloze
 
 ## Card 5
 id: fc-20260217-141500-005
-anki_id:
+anki_id: 1771888044355
 tags: donde, uso
 type: cloze
 
@@ -67,7 +67,7 @@ type: cloze
 
 ## Card 6
 id: fc-20260217-141500-006
-anki_id:
+anki_id: 1771888044392
 tags: cuando, uso
 type: cloze
 
